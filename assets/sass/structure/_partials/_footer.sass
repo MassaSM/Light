@@ -1,0 +1,38 @@
+footer
+    background: var(--background-footer)
+    padding: 6rem 0
+    position: relative
+    .center
+        max-width: 1136px
+    .container__flex
+        @include justify
+        @include breakpoint(mobile)
+            @include flexwrap
+            @include center
+            flex-direction: column
+    .logoFooter
+        max-width: 189px
+        @include breakpoint(mobile)
+            margin: 0 auto 4rem
+    .nav__social ul
+        @include flexbox        
+        gap: 2.4rem
+        @include breakpoint(mobile)
+            @include center
+        a
+            font-size: 1.8rem
+            line-height: 2rem
+            color: var(--color-white)
+            transition: .4s ease all
+            display: block
+            &:hover
+                color: var(--color-secondary)
+                transform: scale(1.2)
+    h2
+        font-weight: $bold
+        font-size: 2rem
+        line-height: 2.4rem
+        color: var(--color-primary)
+        margin-bottom: 1.6rem
+        @include breakpoint(mobile)
+            text-align: center

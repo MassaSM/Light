@@ -1,0 +1,197 @@
+.container__btn__banner
+    @include flexbox
+    gap: .8rem
+    @include breakpoint(tablet)
+        @include flexwrap
+        @include center
+
+.btn__primary
+    border: solid 1px var(--color-primary)
+    border-radius: 42px
+    font-size: 1.4rem
+    line-height: 2rem
+    font-weight: $medium
+    color: var(--color-white)
+    padding: 1.6rem 2rem
+    transition: .4s ease all
+    text-align: center
+    @include breakpoint(mobile)
+        width: 100%
+        padding: 1.6rem
+    &:hover
+        background: var(--background-gradient-one)
+        -webkit-box-shadow: 0px 0px 50px 8px rgba(5, 160, 154, 0.66)
+        -moz-box-shadow: 0px 0px 50px 8px rgba(5, 160, 154, 0.66)
+        box-shadow: 0px 0px 50px 8px rgba(5, 160, 154, 0.66)
+
+.btn__secondary
+    border: solid 1px var(--color-four)
+    border-radius: 42px
+    font-size: 1.4rem
+    line-height: 2rem
+    font-weight: $medium
+    color: var(--color-black)
+    padding: 1.6rem 2rem
+    transition: .4s ease all
+    text-align: center
+    @include breakpoint(mobile)
+        width: 100%
+        padding: 1.6rem
+    &:hover
+        background: var(--background-gradient-orange)
+        -webkit-box-shadow: 0px 0px 20px 8px rgba(239, 124, 5, 0.66)
+        -moz-box-shadow: 0px 0px 20px 8px rgba(239, 124, 5, 0.66)
+        box-shadow: 0px 0px 20px 8px rgba(239, 124, 5, 0.66)
+        color: var(--color-white)
+
+.btn__third
+    background: var(--color-four)
+    border-radius: 42px
+    font-size: 1.4rem
+    line-height: 2rem
+    font-weight: $medium
+    color: var(--color-white)
+    padding: 1.6rem 2rem
+    transition: .4s ease all
+    text-align: center
+    display: block
+    max-width: 174px
+    text-align: center
+    @include breakpoint(mobile)
+        width: 100%
+        padding: 1.6rem
+    &:hover
+        transform: scale(1.1)
+        background: var(--background-gradient-one)
+        -webkit-box-shadow: 0px 0px 50px 8px rgba(5, 160, 154, 0.66)
+        -moz-box-shadow: 0px 0px 50px 8px rgba(5, 160, 154, 0.66)
+        box-shadow: 0px 0px 50px 8px rgba(5, 160, 154, 0.66)
+
+.btn__four
+    background: var(--color-four)
+    border-radius: 42px
+    font-size: 1.4rem
+    line-height: 2rem
+    font-weight: $medium
+    color: var(--color-white)
+    padding: 1.6rem 2rem
+    transition: .4s ease all
+    text-align: center
+    display: block
+    max-width: 174px
+    text-align: center
+    &.w100
+        width: 100%
+        max-width: initial
+    @include breakpoint(mobile)
+        width: 100%
+        padding: 1.6rem
+    &:hover
+        background: var(--background-gradient-orange)
+        -webkit-box-shadow: 0px 0px 20px 8px rgba(239, 124, 5, 0.66)
+        -moz-box-shadow: 0px 0px 20px 8px rgba(239, 124, 5, 0.66)
+        box-shadow: 0px 0px 20px 8px rgba(239, 124, 5, 0.66)
+
+.btn__submit
+    width: 100%
+    max-width: 210px
+    background: var(--color-four)
+    border: none
+    border-radius: 42px
+    padding: 1.6rem 2rem
+    font-size: 1.4rem
+    line-height: 2rem
+    font-weight: $medium
+    color: var(--color-white)
+    cursor: pointer
+    transition: .4s ease all
+    text-align: center
+    @include breakpoint(mobile)
+        max-width: 100%
+    &:hover
+        -webkit-box-shadow: 0px 0px 20px 8px rgba(239, 124, 5, 0.66)
+        -moz-box-shadow: 0px 0px 20px 8px rgba(239, 124, 5, 0.66)
+        box-shadow: 0px 0px 20px 8px rgba(239, 124, 5, 0.66)
+        transform: scale(1.1)
+
+.btn__more
+    width: 100%
+    max-width: 232px
+    display: block
+    background: var(--color-white)
+    border: none
+    border-radius: 42px
+    padding: 1.6rem 2rem
+    font-size: 1.4rem
+    line-height: 2rem
+    font-weight: $medium
+    color: var(--color-black)
+    cursor: pointer
+    transition: .4s ease all
+    text-align: center
+    margin: 7.2rem auto 10.2rem
+    @include breakpoint(mobile)
+        max-width: 100%
+    &:hover
+        background: var(--color-four)
+        -webkit-box-shadow: 0px 0px 20px 8px rgba(239, 124, 5, 0.66)
+        -moz-box-shadow: 0px 0px 20px 8px rgba(239, 124, 5, 0.66)
+        box-shadow: 0px 0px 20px 8px rgba(239, 124, 5, 0.66)
+        transform: scale(1.1)
+        color: var(--color-white)
+
+.btn__simulador
+    width: 100%
+    max-width: 236px
+    height: 55px
+    padding: 0 1.2rem
+    position: fixed
+    bottom: 2.4rem
+    right: 1.6rem
+    border-top-left-radius: 15px
+    border-top-right-radius: 15px
+    border-bottom-left-radius: 15px
+    background: var(--background-gradient-btn-simulador)
+    @include flexbox
+    align-items: center
+    color: var(--color-white)
+    font-size: 1.2rem
+    line-height: 1.6rem
+    gap: 1rem
+    transition: .2s ease all
+    box-shadow: 0px 0px 20px 8px rgba(255,255,255,.2)
+    z-index: 1
+    @include breakpoint(mobile)
+        bottom: 10.4rem
+    &:hover
+        -webkit-box-shadow: 0px 0px 20px 8px rgba(239, 124, 5, 0.66)
+        -moz-box-shadow: 0px 0px 20px 8px rgba(239, 124, 5, 0.66)
+        box-shadow: 0px 0px 20px 8px rgba(239, 124, 5, 0.66)
+        transform: scale(1.1)
+    i
+        font-size: 3rem
+        color: var(--color-four)
+
+
+.btn__links__planos
+    background: var(--background-gradient-btn-plano)
+    border-radius: 42px
+    font-size: 1.4rem
+    line-height: 2rem
+    font-weight: $medium
+    color: var(--color-white)
+    padding: 1.6rem 2rem
+    transition: .4s ease all
+    text-align: center
+    @include breakpoint(mobile)
+        width: 100%
+        padding: 1.6rem
+    &:hover
+        transform: scale(1.1)
+        background: var(--background-gradient-one)
+        -webkit-box-shadow: 0px 0px 50px 8px rgba(5, 160, 154, 0.66)
+        -moz-box-shadow: 0px 0px 50px 8px rgba(5, 160, 154, 0.66)
+        box-shadow: 0px 0px 50px 8px rgba(5, 160, 154, 0.66)
+
+a
+    transition: background-color 0.5s ease

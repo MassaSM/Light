@@ -1,0 +1,740 @@
+section.breadcumb
+    background: var(--background-gradient-one)
+    padding: 2.2rem 4rem
+    position: relative
+    z-index: 1
+    &.entenda__plano
+        background: transparent
+    .container__flex
+        align-items: center
+    h1
+        text-align: center
+        display: block
+        margin: 0 auto
+        font-size: 2rem
+        line-height: 3.6rem
+        color: var(--color-white)
+        text-transform: uppercase
+    i
+        font-size: 2.4rem
+        color: var(--color-white)
+    .btn__voltar
+        background: transparent
+        border: none
+        cursor: pointer
+        
+section.search__noticias
+    padding: 6rem 0
+    .container__search 
+        background: #ffffff
+        margin: 0 auto
+        text-align: center
+        max-width: 560px
+        border-radius: 12px
+        padding: 16px 24px
+        box-sizing: border-box
+        position: relative  
+    .container__search input 
+        width: 100%
+        border: none
+        padding-right: 24px
+        font-size: 1.4rem
+        color: var(--color-black)
+    .container__search button 
+        position: absolute
+        right: 16px
+        border: none
+        font-size: 2rem
+        margin-top: auto
+        margin-bottom: auto
+        top: 0
+        bottom: 0
+        color: var(--color-four)
+        background: transparent
+        cursor: pointer
+        transition: .4s ease all
+        &:hover
+            transform: scale(1.1)
+            color: var(--color-primary)
+    
+
+section.noticias__listagem
+    padding: 0 0 9.5rem
+    .container__listagem__noticias
+        @include noticiasGrid
+        @include noticias
+        .img__noticia img
+            width: 100%
+    
+section.noticias__detalhes
+    padding: 5.4rem 0 9.5rem
+    .content__noticia
+        max-width: 752px
+        margin: 0 auto
+        @include flexbox
+        gap: 4rem
+        .data__noticia
+            font-size: 1.6rem
+            line-height: 2.8rem
+            color: var(--color-black)
+            margin-bottom: 1.6rem
+        .titulo__noticia
+            font-size: 4.8rem
+            line-height: 5rem
+            color: var(--color-black)
+            font-weight: $medium
+            @include breakpoint(mobile)
+                font-size: 2.4rem
+                line-height: 3.2rem
+        .divisor
+            width: 100%
+            height: 1px
+            margin: 2.4rem 0
+            background: var(--color-seven)
+        .chamada__noticia
+            font-size: 2rem
+            line-height: 3rem
+            color: var(--color-black)
+            margin-bottom: 4rem
+        .imagem__noticia
+            border-radius: 20px
+            margin-bottom: 4rem
+            img
+                border-radius: 20px
+                max-width: 100%
+                padding-bottom: 2rem
+            .legenda__foto
+                font-size: 1.2rem
+                line-height: 2rem
+                color: var(--color-black)
+            .autor
+                font-size: 1.2rem
+                font-weight: $light
+                line-height: 2rem
+                color: var(--color-black)
+        .texto
+            p
+                font-size: 1.6rem
+                line-height: 2.8rem
+                color: var(--color-black)
+                &:not(:last-child)
+                    margin-bottom: 4.2rem
+            iframe
+                border-radius: 20px
+                margin-bottom: 6.2rem
+            b
+                font-weight: $semibold
+                font-size: 2rem
+    .share__noticia
+        @include breakpoint(mobile)
+            position: absolute
+            right: 16px
+        .share__lista 
+            li
+                &:not(:last-child)
+                    margin-bottom: .8rem
+            .link__share
+                background: var(--background-gradient-one)
+                width: 44px
+                height: 44px
+                border-radius: 50px
+                font-size: 1.8rem
+                color: var(--color-white)
+                @include flexbox
+                @include center
+                align-items: center
+                transition: background-color 2s ease-out
+                &.active
+                    opacity: 1
+                    pointer-events: auto
+                @include breakpoint(mobile)
+                    opacity: 0
+                    pointer-events: none
+                &:hover
+                    background: var(--background-gradient-orange)
+            .link__share__mobile
+                background: var(--background-gradient-one)
+                width: 44px
+                height: 44px
+                border-radius: 50px
+                font-size: 1.8rem
+                color: var(--color-white)
+                @include flexbox
+                @include center
+                align-items: center
+                transition: background-color 2s ease-out
+                &:hover
+                    background: var(--background-gradient-orange)
+
+    .share__mobile
+        display: none
+        @include breakpoint(mobile)
+            display: block
+            margin-top: -12px
+                
+section.outras__noticias
+    background: var(--color-white)
+    padding: 7.8rem 0 13.2rem
+    .center
+        max-width: 1136px
+    .container__listagem__noticias
+        @include noticiasGrid
+        @include noticias
+    .header__noticias
+        margin-bottom: 6.8rem
+        h2
+            font-size: 4.8rem
+            line-height: 5rem
+            color: var(--color-primary)
+            position: relative
+            text-align: center
+            &:before
+                content: ''
+                position: absolute
+                width: 48px
+                height: 7px
+                background: var(--background-gradient-title)
+                bottom: -24px
+                margin-left: auto
+                margin-right: auto
+                left: 0
+                right: 0
+                text-align: center
+                border-radius: 6px
+
+section.simulador__pagamento
+    padding: 9.5rem 0 11.2rem
+    background: var(--background-gradient-simulador)
+    border-bottom-right-radius: 100px
+    overflow: hidden
+    .container__flex
+        @include justify
+        @include breakpoint(tablet)
+            @include flexwrap
+            gap: 3.2rem
+    .content__simulador
+        width: 100%
+        max-width: 576px
+        position: relative
+        z-index: 1
+        @include breakpoint(tablet)
+            @include flexwrap
+            max-width: initial
+            p
+                text-align: center
+    .img__icon__simulador
+        width: 100%
+        max-width: 620px
+        @include flexbox
+        @include center
+        align-items: center
+        position: relative
+        @include breakpoint(tablet)
+            max-width: initial
+        &:before
+            content: ''
+            position: absolute
+            width: 616px
+            height: 616px
+            top: -34%
+            left: 0
+            background: url('../images/circle__simulador.png')
+            @include breakpoint(tablet)
+                position: absolute
+                margin-left: auto
+                margin-right: auto
+                top: -62%
+                left: 0
+                right: 0
+                text-align: center
+            @include breakpoint(mobile)
+                display: none
+        .bgIcon
+            width: 274px
+            height: 274px
+            background: var(--color-white)
+            border-radius: 50%
+            @include flexbox
+            @include center
+            align-items: center
+            margin: 0 auto
+            position: relative    
+    .header__simulador
+        margin-bottom: 6.8rem
+        h2
+            font-size: 4.8rem
+            line-height: 5rem
+            color: var(--color-white)
+            position: relative
+            @include breakpoint(tablet)
+                text-align: center
+            span
+                font-weight: $medium
+            &:before
+                content: ''
+                position: absolute
+                width: 48px
+                height: 7px
+                background: var(--background-gradient-one)
+                border-top-right-radius: 6px
+                border-bottom-right-radius: 6px
+                left: 0
+                bottom: -24px                
+                @include breakpoint(tablet)                    
+                    text-align: center
+                    border-radius: 6px
+                    margin-left: auto
+                    margin-right: auto
+                    left: 0
+                    right: 0
+                
+    .texto
+        font-size: 1.6rem
+        line-height: 2.8rem
+        color: var(--color-white)
+        &:not(:last-child)
+            margin-bottom: 2.4rem
+    .txt__acesse
+        font-size: 2rem
+        line-height: 3rem
+        color: var(--color-white)
+        margin-bottom: 2.7rem
+    .btn__third
+        @include breakpoint(tablet)
+            margin: 0 auto
+
+section.header__plano
+    background: var(--background-gradient-bgplano)
+    max-height: 484px
+    border-bottom-left-radius: 10rem
+    @include flexbox
+    align-items: center
+    position: relative
+    margin-bottom: 9.5rem      
+    @include breakpoint(tablet)
+        max-height: initial  
+        padding: 8rem 0 8rem
+        margin-bottom: 4rem
+    .btn__voltar
+        background: transparent
+        border: none
+        cursor: pointer
+        position: absolute
+        top: 2.2rem
+        padding: 0 4rem
+        @include breakpoint(mobile)
+            padding: 0 2rem
+        i
+            font-size: 2.4rem
+            color: var(--color-white)
+    .container__flex
+        @include flexbox
+        gap: 8.2rem
+        align-items: center
+        @include breakpoint(tablet)
+            @include flexwrap
+            gap: 4rem
+    .center
+        position: relative
+    h1
+        font-size: 4.8rem
+        line-height: 5rem
+        font-weight: $medium
+        color: var(--color-white)
+        width: 100%
+        max-width: 560px
+        @include breakpoint(tablet)
+            max-width: initial
+        @include breakpoint(mobile)
+            font-size: 3.2rem
+            line-height: 4rem
+    .img__sobre__plano
+        position: relative
+        padding: 2.4rem
+        margin-top: 9.5rem
+        @include breakpoint(tablet)
+            margin-top: 3.2rem
+            display: none
+        &:before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: var(--background-gradient-imgplano)
+            border-top-right-radius: 9rem
+            border-bottom-left-radius: 9rem
+            border-bottom-right-radius: 9rem
+            opacity: .1
+        .img__plano
+            position: relative
+            z-index: 1
+            border-top-right-radius: 9rem
+            border-bottom-left-radius: 9rem
+            border-bottom-right-radius: 9rem
+            max-width: 100%
+
+section.sobre__o__plano
+    padding: 9.5rem 0 12rem
+    @include breakpoint(mobile)
+        padding: 4rem 0 12rem
+    .container__flex
+        gap: 7.5rem
+        @include breakpoint(tablet)
+            @include flexwrap
+    .sobre__o__plano
+        width: 100%
+        max-width: 390px
+        position: relative
+        @include breakpoint(tablet)
+            max-width: initial
+        &:after
+            content: ''
+            position: absolute
+            background: url(../images/circle__before.png) center top no-repeat
+            width: 120px
+            height: 120px
+            top: -40px
+            left: -48px
+            @include breakpoint(mobile)
+                display: none
+        h2
+            font-size: 2.4rem
+            line-height: 3.6rem
+            color: var(--color-black)
+            margin-bottom: 3.2rem
+            span
+                color: var(--color-primary)
+        p
+            font-size: 1.6rem
+            line-height: 2.8rem
+            color: var(--color-black)
+    .opcoes__planos
+        width: 100%
+        max-width: 592px
+        @include breakpoint(tablet)
+            max-width: initial
+    .lista__planos        
+        li
+            &:not(:last-child)
+                border-bottom: solid 1px var(--color-eight)
+        a
+            @include flexbox
+            align-items: center
+            gap: 2.4rem
+            padding: 3rem 0rem
+            transition: opacity 5s
+            &:hover
+                border-radius: 2rem
+                background: var(--color-white)
+                transform: scale(1.1)
+                padding: 3rem 4.6rem
+                i
+                    opacity: 1
+            i
+                font-size: 1.7rem
+                color: var(--color-four)
+                opacity: 0
+                transition: opacity 1s
+            .opcao__item
+                font-size: 1.2rem
+                letter-spacing: .2rem
+                text-transform: uppercase
+                line-height: 1.4rem
+                color: var(--color-black)
+                min-width: 65px
+            h3
+                font-size: 1.8rem
+                line-height: 2.4rem
+                color: var(--color-primary)
+                font-weight: $medium
+
+section.credor
+    padding: 10rem 0
+    background: var(--background-grey)
+    .container__flex
+        gap: 7.7rem
+        @include breakpoint(tablet)
+            @include flexwrap
+        .dados__plano
+            width: 100%
+            max-width: 560px
+            @include breakpoint(tablet)
+                max-width: initial
+            .txt__opcao
+                font-size: 1.6rem 
+                line-height: 2.8rem
+                color: var(--color-black)
+                letter-spacing: .2rem
+                margin-bottom: 1.6rem
+            .titulo__opcao
+                font-size: 4.8rem
+                line-height: 6rem
+                color: var(--color-primary)
+                font-weight: $medium
+                margin-bottom: 4.2rem
+                @include breakpoint(mobile)
+                    font-size: 3.2rem
+                    line-height: 4rem
+            .chamada__opcao
+                font-size: 1.4rem 
+                line-height: 2rem
+                color: var(--color-black)
+                margin-bottom: 4rem
+                b
+                    font-weight: $medium
+            .descricao__plano
+                p
+                    font-size: 1.6rem
+                    line-height: 2.8rem
+                    color: var(--color-black)
+                    padding-left: 2.6rem
+                    position: relative
+                    &:before
+                        content: ''
+                        position: absolute
+                        width: 5px
+                        height: 100%
+                        border-radius: 20px
+                        background: var(--background-gradient-plano)
+                        top: 0
+                        left: 0
+                    b
+                        font-weight: $medium
+                    &:not(:last-child)
+                        margin-bottom: 3rem
+                .container__btns
+                    border-top: solid 1px var(--color-nine)
+                    padding-top: 4rem
+                    @include flexbox
+                    gap: 1.6rem
+                    margin-top: 4rem
+                    @include breakpoint(mobile)
+                        @include flexwrap
+                    button
+                        border: none
+                        cursor: pointer
+        .box__valores
+            width: 100%
+            max-width: 475px
+            padding: 5rem 6.2rem
+            border-top-right-radius: 5rem
+            border-bottom-left-radius: 5rem
+            border-bottom-right-radius: 5rem
+            background: var(--color-white)
+            height: max-content
+            @include breakpoint(tablet)
+                max-width: initial
+            @include breakpoint(mobile)
+                padding: 2.4rem 3rem
+            .txt__exemplo
+                font-size: 1rem
+                line-height: 3.2rem
+                color: var(--color-black)
+                letter-spacing: .3rem
+                text-transform: uppercase
+                @include breakpoint(mobile)
+                    text-align: center
+            .lista__credor__recebe
+                li
+                    padding-bottom: 2rem
+                    &:not(:last-child)
+                        border-bottom: solid 1px var(--color-ten)
+                        margin-bottom: 2rem
+            .lista__item
+                @include flexbox
+                @include justify
+                align-items: baseline
+                gap: 2.2rem
+                @include breakpoint(mobile)
+                    @include flexwrap
+                    @include center
+                    text-align: center
+                .credor__box
+                    p
+                        font-size: 1.8rem
+                        line-height: 3.6rem
+                        color: var(--color-black)
+                    h3
+                        font-size: 3.2rem
+                        line-height: 4.4rem
+                        color: var(--color-black)
+                .recebe__box
+                    width: 100%
+                    max-width: 188px
+                    padding: 1rem 2rem
+                    box-sizing: border-box
+                    border: solid 1px var(--color-primary)
+                    border-radius: 1rem
+                    position: relative
+                    @include breakpoint(mobile)
+                        max-width: initial
+                    .recebe__header
+                        @include flexbox
+                        align-items: center
+                        gap: .8rem
+                        font-size: 1.8rem
+                        color: var(--color-black)
+                        margin-top: -2rem
+                        background: var(--background-grey)
+                        width: max-content
+                        padding-left: .8rem                        
+                        margin-bottom: .9rem
+                        &.pd__right8
+                            padding-right: .8rem
+                        .valor
+                            background: var(--background-gradient-baloon)
+                            font-size: 1rem
+                            font-weight: $medium
+                            color: var(--color-white)
+                            padding: .4rem .8rem
+                            border-radius: 3rem
+                    .recebe__valores
+                        padding-left: 2.6rem
+                        text-align: left
+                        .plus
+                            position: relative
+                            &:before
+                                content: '+'
+                                position: absolute
+                                top: 0
+                                left: -2.4rem
+
+                            &:not(:first-child)
+                                margin-top: 1.6rem
+                        &.pd__left6
+                            padding-left: .6rem
+                        p
+                            font-size: 1.6rem
+                            line-height: 2rem
+                            color: var(--color-primary)
+                    h3
+                        font-size: 3rem
+                        font-weight: $bold
+                        line-height: 4.4rem
+                        color: var(--color-primary)
+                        @include breakpoint(mobile)
+                            font-size: 2.8rem
+                &.full
+                    @include flexwrap
+                    .credor__box
+                        width: 100%
+                    .recebe__box
+                        max-width: initial
+                    .recebe__header
+                        margin-bottom: 2.2rem
+            
+    &.white
+        background: var(--color-white)
+        .box__valores
+            background: var(--background-grey)
+
+section.plano__integra
+    background: var(--background-gradient-plano-integra)
+    min-height: 340px
+    padding: 10.8rem 0
+    @include flexbox
+    align-items: center
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        background: url('../images/mask-light.png') center top no-repeat
+        width: 627px
+        height: 100%
+        background-size: cover
+    .center
+        max-width: 1040px
+    .container__flex
+        gap: 11.2rem
+        align-items: center
+        position: relative
+        @include breakpoint(mobile)
+            @include flexwrap
+            gap: 4rem
+            text-align: center
+        h2
+            width: 100%
+            max-width: 560px
+            font-size: 3.2rem
+            line-height: 4.4rem
+            color: var(--color-white)
+        b
+            font-weight: $medium
+        .box__content
+            width: 100%
+            max-width: 360px
+            @include breakpoint(mobile)
+                max-width: initial
+            p
+                font-size: 2rem
+                line-height: 3rem
+                color: var(--color-white)
+                margin-bottom: 2.2rem
+            
+section.plano__na__midia
+    padding: 7.6rem 0rem 0rem
+    .simulador
+        max-width: 1280px
+        margin: 0 auto
+        padding: 7rem 7.2rem
+        background: var(--background-gradient-simulador)
+        border-radius: 20px
+        @include flexbox
+        align-items: center
+        @include breakpoint(mobile)
+            padding: 7rem 0rem
+            @include flexwrap
+            gap: 6rem
+            @include center
+            text-align: center
+        h3
+            width: 100%
+            max-width: 560px
+            font-size: 3.2rem
+            line-height: 4.4rem
+            color: var(--color-white)
+            margin-bottom: 3rem
+            b
+                font-weight: $medium
+        .box__icon
+            width: 100%
+            max-width: 530px
+            @include breakpoint(mobile)
+                max-width: initial
+            .bg__icon
+                width: 234px
+                height: 234px
+                background: var(--color-white)
+                border-radius: 50%
+                @include flexbox
+                @include center
+                align-items: center
+                margin: 0 auto
+                position: relative
+                &:before
+                    content: ''
+                    position: absolute
+                    top: 0
+                    background: url(../images/mascara-plano-integra.png) center top no-repeat
+                    width: 633px
+                    height: 347px
+                    position: absolute
+                    margin-top: auto
+                    margin-bottom: auto
+                    top: 0
+                    bottom: 0
+            .img__calculadora
+                max-width: 121px
+        .btn__four
+            @include breakpoint(mobile)
+                margin: 0 auto
+                max-width: initial
+        .box__content
+            position: relative
+            z-index: 1
+            @include breakpoint(mobile)
+                padding: 0 2rem
